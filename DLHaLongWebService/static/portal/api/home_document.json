@@ -1,0 +1,166 @@
+{
+    "_id": 1,
+    "bannerImg": [
+        {
+            "img": "assets/img/bannerImg7.jpg",
+            "description": "Vịnh Hạ Long<br><span style=\"font-size:25px;\">Kỳ quan thiên nhiên mới của thế giới</span>"
+        },
+        {
+            "img": "assets/img/bannerImg3.jpeg",
+            "description": "Vịnh Hạ Long<br><span style=\"font-size:25px;\">Kỳ quan thiên nhiên mới của thế giới</span>"
+        },
+        {
+            "img": "assets/img/bannerImg1.jpg",
+            "description": "Vịnh Hạ Long<br><span style=\"font-size:25px;\">Kỳ quan thiên nhiên mới của thế giới</span>"
+        },
+        {
+            "img": "assets/img/bannerImg9.jpg",
+            "description": "Vịnh Hạ Long<br><span style=\"font-size:25px;\">Kỳ quan thiên nhiên mới của thế giới</span>"
+        },
+        {
+            "img": "assets/img/bannerImg6.jpg",
+            "description": "Vịnh Hạ Long<br><span style=\"font-size:25px;\">Kỳ quan thiên nhiên mới của thế giới</span>"
+        }
+    ],
+    "logo": {
+    },
+    "menu": [
+        {
+            "_id": 1,
+            "name": "Trang chủ",
+            "isShow": true,
+            "link": "#/",
+            "objectName": "Home"
+        },
+        {
+            "_id": 2,
+            "name": "Tiềm năng",
+            "isShow": true,
+            "link": "#/",
+            "objectName": "tiemnang"
+        },
+        {
+            "_id": 3,
+            "name": "Tin tức",
+            "isShow": true,
+            "link": "#/",
+            "objectName": "tintuc"
+        },
+        {
+            "_id": 4,
+            "name": "Sự kiện",
+            "isShow": true,
+            "link": "#Event",
+            "objectName": "Event"
+        },
+        {
+            "_id": 5,
+            "name": "Dịch vụ",
+            "isShow": true,
+            "link": "#Service",
+            "subMenu": [
+                {
+                    "_id": 51,
+                    "name": "Địa danh",
+                    "isShow": true,
+                    "link": "#Attraction",
+                    "objectName": "Attraction"
+                },
+                {
+                    "_id": 52,
+                    "name": "Khách sạn",
+                    "isShow": true,
+                    "link": "#Hotel",
+                    "objectName": "Hotel"
+                },
+                {
+                    "_id": 53,
+                    "name": "Nhà hàng",
+                    "isShow": true,
+                    "link": "#Restaurant",
+                    "objectName": "Restaurant"
+                },
+                {
+                    "_id": 54,
+                    "name": "Lưu niệm",
+                    "isShow": true,
+                    "link": "#/",
+                    "objectName": "luuniem"
+                },
+                {
+                    "_id": 55,
+                    "name": "Wifi Free",
+                    "isShow": true,
+                    "link": "#/",
+                    "objectName": "wifi"
+                },
+                {
+                    "_id": 56,
+                    "name": "ATM",
+                    "isShow": true,
+                    "link": "#/",
+                    "objectName": "atm"
+                }
+            ],
+            "objectName": "Service"
+        },
+        {
+            "_id": 6,
+            "name": "Tìm kiếm",
+            "isShow": true,
+            "link": "#/",
+            "objectName": "timkiem"
+        },
+        {
+            "_id": 7,
+            "name": "Thông tin cần biết",
+            "isShow": true,
+            "link": "#/",
+            "objectName": "thongtincanthiet"
+        },
+        {
+            "_id": 8,
+            "name": "Thông tin cá nhân",
+            "isShow": true,
+            "link": "#Personal",
+            "subMenu": [
+                {
+                    "name": "Gợi ý lịch trình",
+                    "isShow": true,
+                    "link": "#Tour",
+                    "objectName": "Tour"
+                },
+                {
+                    "name": "Lịch trình cá nhân",
+                    "isShow": true,
+                    "link": "#/",
+                    "objectName": "Tour"
+                },
+                {
+                    "name": "Thông tin cá nhân",
+                    "isShow": true,
+                    "link": "#/",
+                    "objectName": "Tour"
+                },
+                {
+                    "name": "Hóa đơn của tôi",
+                    "isShow": true,
+                    "link": "#MyTicket",
+                    "objectName": "MyTicket"
+                },
+                {
+                    "name": "Thông tin phản hồi",
+                    "isShow": true,
+                    "link": "#/",
+                    "objectName": "Ticket"
+                }
+            ],
+            "objectName": "Personal"
+        }
+    ],
+    "image": [
+        "assets/img/banner4.jpg",
+        "assets/img/bannerImg5.jpg"
+    ]
+
+}

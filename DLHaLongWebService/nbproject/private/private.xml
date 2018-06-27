@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="DIP">
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/api/map-history.json</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/home.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/api/map_hotel.json</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/src/mongodb/mca/SessionCollections.java</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/api/map-wifi.json</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/TourDetail.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/nbproject/project.properties</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/build.xml</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/src/render/RenderMain.java</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/app.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/api/map_restaurant.json</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/css/style.less</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/DetailView.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/src/http/controller/ObjectController.java</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/src/view/home.ftl</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/manifest.mf</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/ManagementServiceView.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/MapsView.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/src/http/service/ServiceDaemon.java</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/src/render/RenderEngine.java</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/api/map-hotel.json</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/MapsDetail.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/main.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/css/style.css</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/src/mongodb/mca/ObjectCollections.java</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/conf/production.config.ini</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/TicketView.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/api/map-atm.json</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/RegisterView.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/src/http/controller/HomeController.java</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/HomeView.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/src/http/controller/UserController.java</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/HDVView.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/TourView.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/src/mongodb/mca/ExceptionsCollection.java</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/src/http/response/DataResponse.java</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/conf/development.config.ini</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/router.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/api/map-gift.json</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/nbproject/build-impl.xml</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/MyTicket.js</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/src/mongodb/mca/CountersCollection.java</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/api/map_atm.json</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/api/map-food.json</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/api/map_attraction.json</file>
+            <file>file:/home/namdv/devel/DLTM/DLHaLongWebService/static/portal/assets/js/appmobile.js</file>
+        </group>
+    </open-files>
+</project-private>
