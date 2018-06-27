@@ -1,0 +1,39 @@
+ WARN [pool-1-thread-1] 2014-12-15 15:40:53,445 TNonblockingServer.java (line 635) Exception while invoking!
+org.apache.thrift.protocol.TProtocolException: Bad version in readMessageBegin
+	at org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:208)
+	at fis.crd.ephcm.thrift.TEPHCMImporterMDBService$Processor.process(TEPHCMImporterMDBService.java:195)
+	at org.apache.thrift.server.TNonblockingServer$FrameBuffer.invoke(TNonblockingServer.java:631)
+	at org.apache.thrift.server.THsHaServer$Invocation.run(THsHaServer.java:201)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+ WARN [pool-1-thread-2] 2014-12-15 15:40:53,452 TNonblockingServer.java (line 635) Exception while invoking!
+org.apache.thrift.protocol.TProtocolException: Bad version in readMessageBegin
+	at org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:208)
+	at fis.crd.ephcm.thrift.TEPHCMImporterMDBService$Processor.process(TEPHCMImporterMDBService.java:195)
+	at org.apache.thrift.server.TNonblockingServer$FrameBuffer.invoke(TNonblockingServer.java:631)
+	at org.apache.thrift.server.THsHaServer$Invocation.run(THsHaServer.java:201)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+ERROR [Thread-3] 2014-12-15 16:13:12,221 TNonblockingServer.java (line 467) Read an invalid frame size of 0. Are you using TFramedTransport on the client side?
+ERROR [Thread-3] 2014-12-18 00:13:37,781 TNonblockingServer.java (line 467) Read an invalid frame size of 0. Are you using TFramedTransport on the client side?
+ERROR [Thread-3] 2014-12-18 09:16:20,749 TNonblockingServer.java (line 467) Read an invalid frame size of 0. Are you using TFramedTransport on the client side?
+ WARN [pool-1-thread-1] 2015-02-27 11:15:38,587 AbstractNonblockingServer.java (line 520) Exception while invoking!
+org.apache.thrift.protocol.TProtocolException: Bad version in readMessageBegin
+	at org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:195)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:27)
+	at org.apache.thrift.server.AbstractNonblockingServer$FrameBuffer.invoke(AbstractNonblockingServer.java:516)
+	at org.apache.thrift.server.Invocation.run(Invocation.java:18)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+ WARN [pool-1-thread-2] 2015-02-27 11:15:38,617 AbstractNonblockingServer.java (line 520) Exception while invoking!
+org.apache.thrift.protocol.TProtocolException: Bad version in readMessageBegin
+	at org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:195)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:27)
+	at org.apache.thrift.server.AbstractNonblockingServer$FrameBuffer.invoke(AbstractNonblockingServer.java:516)
+	at org.apache.thrift.server.Invocation.run(Invocation.java:18)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)

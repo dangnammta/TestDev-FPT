@@ -1,0 +1,34 @@
+Lexer tokenized input:
+======================
+[C:-- Line comment][NL:
+][T:a][C:--b also a comment][NL:
+][WS: ][C:-- comment][NL:
+][WS:	][C:--comment][NL:
+][C:-- comment -- comment][NL:
+][Eof:]
+Tokens:
+=======
+[Token Comment at TS-pass-lineComment.txt(1:1 [0] - 1:16 [15]): '-- Line comment']
+[Token NewLine at TS-pass-lineComment.txt(1:16 [15] - 2:1 [16]): '\n']
+[Token Text at TS-pass-lineComment.txt(2:1 [16] - 2:2 [17]): 'a']
+[Token Comment at TS-pass-lineComment.txt(2:2 [17] - 2:20 [35]): '--b also a comment']
+[Token NewLine at TS-pass-lineComment.txt(2:20 [35] - 3:1 [36]): '\n']
+[Token Whitespace at TS-pass-lineComment.txt(3:1 [36] - 3:2 [37]): ' ']
+[Token Comment at TS-pass-lineComment.txt(3:2 [37] - 3:12 [47]): '-- comment']
+[Token NewLine at TS-pass-lineComment.txt(3:12 [47] - 4:1 [48]): '\n']
+[Token Whitespace at TS-pass-lineComment.txt(4:1 [48] - 4:2 [49]): '\t']
+[Token Comment at TS-pass-lineComment.txt(4:2 [49] - 4:11 [58]): '--comment']
+[Token NewLine at TS-pass-lineComment.txt(4:11 [58] - 5:1 [59]): '\n']
+[Token Comment at TS-pass-lineComment.txt(5:1 [59] - 5:22 [80]): '-- comment -- comment']
+[Token NewLine at TS-pass-lineComment.txt(5:22 [80] - 6:1 [81]): '\n']
+[Token Eof at TS-pass-lineComment.txt(6:1 [81] - 6:1 [81]): '']
+
+*** Execute batch (1)
+Batch text:
+-- Line comment
+a--b also a comment
+ -- comment
+	--comment
+-- comment -- comment
+
+

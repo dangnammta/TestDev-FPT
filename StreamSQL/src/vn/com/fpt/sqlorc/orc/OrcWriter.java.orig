@@ -1,0 +1,127 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package vn.com.fpt.sqlorc.orc;
+
+import java.io.IOException;
+
+import org.apache.hadoop.hive.ql.io.orc.OrcFile;
+import org.apache.hadoop.hive.ql.io.orc.Writer;
+import org.apache.crunch.types.orc.OrcUtils;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.hive.ql.io.orc.OrcStruct; 
+import org.apache.hadoop.hive.serde2.io.DoubleWritable;
+import org.apache.hadoop.hive.serde2.io.ShortWritable;
+import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
+import org.apache.hadoop.hive.serde2.typeinfo.TypeInfo;
+import org.apache.hadoop.hive.serde2.typeinfo.TypeInfoUtils;
+import org.apache.hadoop.io.FloatWritable;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+
+//import org.apache.orc.MemoryManager;
+
+//import org.apache.hadoop.hive.ql.io.orc.MemoryManager;
+
+/**
+ *
+ * @author cuongnc
+ */
+public class OrcWriter {
+
+	private Writer writer;
+	
+	private TypeInfo typeInfo;
+	private Configuration configuration;
+	private boolean isInit = false;
+	private Path filePath;
+	
+	//private long maxDataSize = 10000;
+
+	public OrcWriter(String schemStr, String savePath) throws Exception {
+		init(schemStr, savePath);
+	}
+
+	private void init(String schemStr, String savePath) throws Exception {
+		//read from configuration file
+		//String schemStr = "struct<string_value:string,short_value:smallint,integer_value:int,long_value:bigint,double_value:double,float_value:float>";
+		
+		//String schemStr = "struct<tin:string,normname:string>";
+		
+		
+		typeInfo = TypeInfoUtils.getTypeInfoFromTypeString(schemStr);
+		ObjectInspector inspector = OrcStruct.createObjectInspector(typeInfo);
+		
+		configuration = new Configuration();
+<<<<<<< working copy
+		//filePath = new Path("./my-fileText5.orc");
+		filePath = new Path("C://jarflie//my-fileText5.orc");
+		//MemoryManager memorymanager = new MemoryManager(configuration);
+=======
+		filePath = new Path(savePath);
+		MemoryManager memorymanager = new MemoryManager(configuration);
+>>>>>>> destination
+		OrcFile.WriterOptions wopts = OrcFile.writerOptions(configuration);
+<<<<<<< working copy
+		wopts.inspector(inspector).stripeSize(100000).bufferSize(10000);
+=======
+		//wopts.inspector(inspector).stripeSize(100000).bufferSize(10000).memory(memorymanager);
+		wopts.inspector(inspector).stripeSize(100000).bufferSize(10000);
+>>>>>>> destination
+		
+		writer = OrcFile.createWriter(filePath, wopts);
+		isInit = true;
+	}
+
+	public boolean write(Object[] data) throws Exception {
+		//System.out.println("Orc write: " + data.tin + " is init " + String.valueOf(isInit));
+		if (isInit) {
+			/*OrcStruct orcLine = OrcUtils.createOrcStruct(
+				typeInfo,new Text(data.tin),
+					new Text(data.normName));*/
+			OrcStruct orcLine = OrcUtils.createOrcStruct(typeInfo, data);
+			writer.addRow(orcLine);
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+
+	public void testCruch() throws IOException {
+		String input = "text_string\t1\t2\t3\t123.4\t123.45";
+		
+		String typeStr = "struct<string_value:string,short_value:smallint,integer_value:int,long_value:bigint,double_value:double,float_value:float>";
+		TypeInfo typeInfo = TypeInfoUtils.getTypeInfoFromTypeString(typeStr);
+		ObjectInspector inspector = OrcStruct.createObjectInspector(typeInfo);
+
+		String[] inputTokens = input.split("\\t");
+
+		OrcStruct orcLine = OrcUtils.createOrcStruct(
+				typeInfo,
+				new Text(inputTokens[0]),
+				new ShortWritable(Short.valueOf(inputTokens[1])),
+				new IntWritable(Integer.valueOf(inputTokens[2])),
+				new LongWritable(Long.valueOf(inputTokens[3])),
+				new DoubleWritable(Double.valueOf(inputTokens[4])),
+				new FloatWritable(Float.valueOf(inputTokens[5])));
+		Configuration conf = new Configuration();
+		Path tempPath = new Path("my-fileText3.orc");
+
+		Writer writer = org.apache.hadoop.hive.ql.io.orc.OrcFile.createWriter(tempPath, org.apache.hadoop.hive.ql.io.orc.OrcFile.writerOptions(conf).inspector(inspector).stripeSize(100000).bufferSize(10000));
+		writer.addRow(orcLine);
+		writer.close();
+	}
+	
+	public void close() throws Exception {
+		writer.close();
+		configuration = null;
+		typeInfo = null;
+		isInit = false;
+	}
+}

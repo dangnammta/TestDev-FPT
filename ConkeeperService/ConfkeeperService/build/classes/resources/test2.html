@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Confkeeper</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--js-->
+        <script src="moment.js" type="text/javascript"></script>
+
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+        <script src="jquery.js" type="text/javascript"></script>
+        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+        <script src="bootstrap.js" type="text/javascript"></script>
+        <script src="gonrin.datetimepicker.js" type="text/javascript"></script>
+        <!--<a href="glyphicons-halflings-regular.eot"></a>-->
+        <!--css-->
+        <!-- Optional theme -->
+        <!--                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+        <link href="bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet"> 
+        <link href="gonrin.datetimepicker.css" rel="stylesheet" type="text/css"/>
+        <!-- Latest compiled and minified JavaScript -->
+
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <!--js-->
+
+        <script>
+            $(document).ready(function () {
+                $(".nav-tabs a").click(function () {
+                    $(this).tab('show');
+                });
+                $('.nav-tabs a').on('shown.bs.tab', function (event) {
+                    var x = $(event.target).text();         // active tab
+                    var y = $(event.relatedTarget).text();  // previous tab
+                    $(".act span").text(x);
+                    $(".prev span").text(y);
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetime').datetimepicker({
+                    textFormat: 'DD-MM-YYYY',
+                    extraFormats: ['DDMMYYYY']
+                });
+                $('#datetime').on('change.gonrin', function (e) {
+                    console.log(e.date);
+                })
+            });
+        </script>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetime1').datetimepicker({
+                    textFormat: 'DD-MM-YYYY',
+                    extraFormats: ['DDMMYYYY']
+                });
+                $('#datetime1').on('change.gonrin', function (e) {
+                    console.log(e.date);
+                })
+            });
+        </script>
+        <script type="text/javascript">
+            var datetime = $("#datetime").val();
+                    $.getJSON(conf / conf1,
+                            {
+                                datetime: datetime,
+                            },
+                            )
+        </script>
+        <script type="text/javascript">
+            var datetime = $("#datetime1").val();
+                    $.getJSON(conf / conf1,
+                            {
+                                datetime1: datetime,
+                            },
+                            )
+        </script>
+    </head>
+    <body>
+        <div class="warraper">
+            <header>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="logo">
+                            <img src="logo1212.png" alt=""/>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="menuhead">
+                            <p class="tieude1">Configuration Management</p>
+                            <p class="tieude2">Project: confkeeper service</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="container">
+
+
+                <ul class="nav nav-tabs tab1">
+                    <li class="active cu1 font2"><a href="#home">Current config</a></li>
+                    <li class="font2"><a href="#menu1">History</a></li>   
+                </ul>
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <div class="contai">
+                            <div class="row">
+                                <div class="col-lg-3 xx">
+                                    <div class="leftmenu">
+
+                                        <div class="leftmenu1">
+                                            <div class="row">                                    
+                                                <div class="col-lg-12">
+                                                    <div class="search-box1">
+                                                        <div class="form-group s1">
+
+                                                            <input type="text" class="form-control" placeholder="Search.." id="usr">
+                                                        </div>
+                                                        <div class="btn-group s2" role="group" aria-label="...">
+                                                            <button type="button" class="btn btn-default">Save</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div><!-- /.col-lg-6 -->
+                                            </div><!-- /.row -->
+                                            <div class="menu1">
+                                                <div class="menu2">
+                                                    <p>Known Path</p>
+                                                    <!--                                                    <button type="button" class="btn btn-info fil">Info</button>-->
+                                                    <!--<button type="button" class="btn btn-default fil">Filter</button>-->
+                                                    <button type="button" class="btn btn-link fil">Filter</button>
+                                                </div>
+                                                <ul>
+
+                                                    <li style="margin-left: 10px;"><a href="#home">
+                                                            <a class="btn btn-primary btnmenu1"  role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                                Store </a>
+
+
+                                                            <div class="collapse colap1" id="collapseExample">
+                                                                <div class="menucon1">
+                                                                    <ul>
+                                                                        <li style="margin-left: 10px; border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                <i class="ion ion-record icon1"></i>
+                                                                                <span class="kc3"></span>Service2</a>
+                                                                        </li> 
+                                                                        <li style="margin-left: 10px;border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                <i class="ion ion-record icon1"></i>
+                                                                                <span class="kc3"></span>Service2</a>
+                                                                        </li> 
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                    </li> 
+                                                    <li style="margin-left: 10px;"><a href="#home">
+                                                            <a class="btn btn-primary btnmenu1"  role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+                                                                Controller </a>
+
+
+                                                            <div class="collapse colap1" id="collapseExample1">
+                                                                <div class="menucon1">
+                                                                    <ul>
+                                                                        <li style="margin-left: 10px; border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                <i class="ion ion-record icon2"></i>
+                                                                                <span class="kc3"></span>Service2</a>
+                                                                        </li> 
+                                                                        <li style="margin-left: 10px;border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                <i class="ion ion-record icon2"></i>
+                                                                                <span class="kc3"></span>Service2</a>
+                                                                        </li> 
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                    </li> 
+
+
+
+                                                </ul>  
+                                            </div>
+                                            <div class="menu1">
+                                                <div class="menu2">
+                                                    <p>UnKnown Path</p>
+                                                    <button type="button" class="btn btn-link fil">Filter</button>
+                                                </div>
+                                                <ul>
+                                                    <li style="margin-left: 10px;"><a href="#home">
+                                                            <a class="btn btn-primary btnmenu1"  role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                                                                Store </a>
+
+
+                                                            <div class="collapse colap1" id="collapseExample2">
+                                                                <div class="menucon1">
+                                                                    <ul>
+                                                                        <li style="margin-left: 10px; border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                <i class="ion ion-record icon1"></i>
+                                                                                <span class="kc3"></span>Service2</a>
+                                                                        </li> 
+                                                                        <li style="margin-left: 10px;border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                <i class="ion ion-record icon1"></i>
+                                                                                <span class="kc3"></span>Service2</a>
+                                                                        </li> 
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                    </li>
+                                                    <li style="margin-left: 10px;"><a href="#home">
+                                                            <a class="btn btn-primary btnmenu1"  role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                                                                Controller </a>
+
+
+                                                            <div class="collapse colap1" id="collapseExample3">
+                                                                <div class="menucon1">
+                                                                    <ul>
+                                                                        <li style="margin-left: 10px; border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                <i class="ion ion-record icon2"></i>
+                                                                                <span class="kc3"></span>Service2</a>
+                                                                        </li> 
+                                                                        <li style="margin-left: 10px;border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                <i class="ion ion-record icon2"></i>
+                                                                                <span class="kc3"></span>Service2</a>
+                                                                        </li> 
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                    </li>
+                                                </ul>   
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9 yy">
+                                    <div class="rightmenu">
+                                        <div class="rightmenu-tieude">
+                                            <p>Wellcome Confkeeper-Service</p>
+                                        </div>
+                                        <div class="box">
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="box1">
+                                                        <span class="box11">
+                                                            <i class="ion ion-arrow-graph-up-right cpu"></i>
+                                                        </span>
+
+                                                        <div class="box12">
+                                                            <span class="cpu1">Service1</span>
+                                                            <span class="cpu2">ON</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="box1">
+                                                        <span class="box10">
+                                                            <i class="ion ion-arrow-graph-down-left cpu"></i>
+                                                        </span>
+
+                                                        <div class="box12">
+                                                            <span class="cpu1">Service2</span>
+                                                            <span class="cpu2">OFF</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="box1">
+                                                        <span class="box11">
+                                                            <i class="ion ion-arrow-graph-up-right cpu"></i>
+                                                        </span>
+
+                                                        <div class="box12">
+                                                            <span class="cpu1">Service3</span>
+                                                            <span class="cpu2">ON</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="box1">
+                                                        <span class="box10">
+                                                            <i class="ion ion-arrow-graph-down-left cpu"></i>
+                                                        </span>
+
+                                                        <div class="box12">
+                                                            <span class="cpu1">Service4</span>
+                                                            <span class="cpu2">OFF</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="search-box">
+                                            <div class="row">
+
+                                                <div class="col-lg-12">
+                                                    <div class="button1">
+                                                        <button type="button" class="btn btn-success">Add Unknown Path</button>
+                                                        <button type="button" class="btn btn-danger">Remove form Known Path</button>
+                                                    </div>
+                                                </div><!-- /.col-lg-6 -->
+
+                                            </div><!-- /.row -->
+                                        </div>
+                                        <div class="table-ser">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Service name</th>
+                                                        <th>Host</th>
+                                                        <th>Port</th>
+                                                        <th>Status</th>
+                                                        <th>Cách khắc phục</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="font1">Service 1</td>
+                                                        <td class="font1">xxx</td>
+                                                        <td class="font1">8080</td>
+                                                        <td><div class="trangthai1"><p>ON</p></div></td>
+                                                        <td class="font1">Mua cái mới</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font1">Service 2</td>
+                                                        <td class="font1">yyy</td>
+                                                        <td class="font1">8080</td>
+                                                        <td><div class="trangthai2"><p>OFF</p></div></td>
+                                                        <td class="font1">Mua cái mới</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font1">Service 3</td>
+                                                        <td class="font1">zzz</td>
+                                                        <td class="font1">8080</td>
+                                                        <td><div class="trangthai2"><p>OFF</p></div></td>
+                                                        <td class="font1">Mua cái mới</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <div class="contai">
+                            <div class="row">
+
+                                <div class="col-lg-12">
+                                    <div class="rightmenu">
+                                        <div class="rightmenu-tieude">
+                                            <p>History Confkeeper-Service</p>
+                                        </div>
+                                        <div class="box">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="date1">
+                                                        <div class="row-fluid" id="content" style="margin-top:20px;">
+                                                            <p class="font2">Từ Ngày:</p>
+                                                            <br/>
+                                                            <div style="width:130%" class="date10">
+                                                                <div style="width:50%;">
+
+                                                                    <input type='text' id='datetime' value='22012016'/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="date2">
+                                                        <div class="row-fluid" id="content" style="margin-top:20px;">
+                                                            <p class="font2">Đến ngày:</p>
+                                                            <br/>
+                                                            <div style="width:100%" class="date10">
+                                                                <div style="width:50%;">
+                                                                    <input type='text' id='datetime1' value='22012016'/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="search2"><button type="button" class="btn btn-default">Search</button></div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="table-ser">
+                                            <table class="table font1">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Configuration History</th>
+
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+
+                                                        <td class="dialog1">
+
+                                                            <a href="#" id="myBtn">16/01/2017</a>
+                                                            <!-- The Modal -->
+                                                            <div id="myModal" class="modal">
+
+                                                                <!-- Modal content -->
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <span class="close">&times;</span>
+                                                                        <h2>History Day xx/xx/xxxx</h2>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="contai">
+                                                                            <div class="row">
+                                                                                <div class="col-lg-3 xx">
+                                                                                    <div class="leftmenu">
+
+                                                                                        <div class="leftmenu1">
+                                                                                            <div class="row">                                    
+                                                                                                <div class="col-lg-12">
+
+                                                                                                </div><!-- /.col-lg-6 -->
+                                                                                            </div><!-- /.row -->
+                                                                                            <div class="menu1">
+                                                                                                <div class="menu2">
+                                                                                                    <p>Known Path</p>
+                                                                                                    <!--                                                    <button type="button" class="btn btn-info fil">Info</button>-->
+                                                                                                    <!--<button type="button" class="btn btn-default fil">Filter</button>-->
+                                                                                                    <button type="button" class="btn btn-link fil1">Filter</button>
+                                                                                                </div>
+                                                                                                <ul>
+
+                                                                                                    <li style="margin-left: 10px;"><a href="#home">
+                                                                                                            <a class="btn btn-primary btnmenu1"  role="button" data-toggle="collapse" href="#collapseExample5" aria-expanded="false" aria-controls="collapseExample">
+                                                                                                                Store </a>
+
+
+                                                                                                            <div class="collapse colap1" id="collapseExample5">
+                                                                                                                <div class="menucon1">
+                                                                                                                    <ul>
+                                                                                                                        <li style="margin-left: 10px; border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                                                                <i class="ion ion-record icon1"></i>
+                                                                                                                                <span class="kc3"></span>Service2</a>
+                                                                                                                        </li> 
+                                                                                                                        <li style="margin-left: 10px;border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                                                                <i class="ion ion-record icon1"></i>
+                                                                                                                                <span class="kc3"></span>Service2</a>
+                                                                                                                        </li> 
+                                                                                                                    </ul>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                    </li> 
+                                                                                                    <li style="margin-left: 10px;"><a href="#home">
+                                                                                                            <a class="btn btn-primary btnmenu1"  role="button" data-toggle="collapse" href="#collapseExample6" aria-expanded="false" aria-controls="collapseExample">
+                                                                                                                Controller </a>
+
+
+                                                                                                            <div class="collapse colap1" id="collapseExample6">
+                                                                                                                <div class="menucon1">
+                                                                                                                    <ul>
+                                                                                                                        <li style="margin-left: 10px; border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                                                                <i class="ion ion-record icon2"></i>
+                                                                                                                                <span class="kc3"></span>Service2</a>
+                                                                                                                        </li> 
+                                                                                                                        <li style="margin-left: 10px;border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                                                                <i class="ion ion-record icon2"></i>
+                                                                                                                                <span class="kc3"></span>Service2</a>
+                                                                                                                        </li> 
+                                                                                                                    </ul>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                    </li> 
+
+
+
+                                                                                                </ul>  
+                                                                                            </div> 
+                                                                                            <div class="menu1">
+                                                                                                <div class="menu2">
+                                                                                                    <p>Known Path</p>
+
+                                                                                                    <button type="button" class="btn btn-link fil1">Filter</button>
+                                                                                                </div>
+                                                                                                <ul>
+
+                                                                                                    <li style="margin-left: 10px;"><a href="#home">
+                                                                                                            <a class="btn btn-primary btnmenu1"  role="button" data-toggle="collapse" href="#collapseExample7" aria-expanded="false" aria-controls="collapseExample">
+                                                                                                                Store </a>
+
+
+                                                                                                            <div class="collapse colap1" id="collapseExample7">
+                                                                                                                <div class="menucon1">
+                                                                                                                    <ul>
+                                                                                                                        <li style="margin-left: 10px; border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                                                                <i class="ion ion-record icon1"></i>
+                                                                                                                                <span class="kc3"></span>Service2</a>
+                                                                                                                        </li> 
+                                                                                                                        <li style="margin-left: 10px;border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                                                                <i class="ion ion-record icon1"></i>
+                                                                                                                                <span class="kc3"></span>Service2</a>
+                                                                                                                        </li> 
+                                                                                                                    </ul>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                    </li> 
+                                                                                                    <li style="margin-left: 10px;"><a href="#home">
+                                                                                                            <a class="btn btn-primary btnmenu1"  role="button" data-toggle="collapse" href="#collapseExample8" aria-expanded="false" aria-controls="collapseExample">
+                                                                                                                Controller </a>
+
+
+                                                                                                            <div class="collapse colap1" id="collapseExample8">
+                                                                                                                <div class="menucon1">
+                                                                                                                    <ul>
+                                                                                                                        <li style="margin-left: 10px; border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                                                                <i class="ion ion-record icon2"></i>
+                                                                                                                                <span class="kc3"></span>Service2</a>
+                                                                                                                        </li> 
+                                                                                                                        <li style="margin-left: 10px;border-bottom: 1px solid #ddd"><a href="#home">
+                                                                                                                                <i class="ion ion-record icon2"></i>
+                                                                                                                                <span class="kc3"></span>Service2</a>
+                                                                                                                        </li> 
+                                                                                                                    </ul>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                    </li> 
+
+
+
+                                                                                                </ul>  
+                                                                                            </div>
+
+
+
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-lg-9 yy">
+                                                                                    <div class="rightmenu">
+                                                                                        <div class="rightmenu-tieude">
+                                                                                            <p>Wellcome Confkeeper-Service</p>
+                                                                                        </div>
+                                                                                        <div class="box">
+                                                                                            <div class="row">
+                                                                                                <div class="col-lg-3">
+                                                                                                    <div class="box1">
+                                                                                                        <span class="box11">
+                                                                                                            <i class="ion ion-arrow-graph-up-right cpu"></i>
+                                                                                                        </span>
+
+                                                                                                        <div class="box12">
+                                                                                                            <span class="cpu1">Service1</span>
+                                                                                                            <span class="cpu2">ON</span>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="col-lg-3">
+                                                                                                    <div class="box1">
+                                                                                                        <span class="box10">
+                                                                                                            <i class="ion ion-arrow-graph-down-left cpu"></i>
+                                                                                                        </span>
+
+                                                                                                        <div class="box12">
+                                                                                                            <span class="cpu1">Service2</span>
+                                                                                                            <span class="cpu2">OFF</span>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="col-lg-3">
+                                                                                                    <div class="box1">
+                                                                                                        <span class="box11">
+                                                                                                            <i class="ion ion-arrow-graph-up-right cpu"></i>
+                                                                                                        </span>
+
+                                                                                                        <div class="box12">
+                                                                                                            <span class="cpu1">Service3</span>
+                                                                                                            <span class="cpu2">ON</span>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="col-lg-3">
+                                                                                                    <div class="box1">
+                                                                                                        <span class="box10">
+                                                                                                            <i class="ion ion-arrow-graph-down-left cpu"></i>
+                                                                                                        </span>
+
+                                                                                                        <div class="box12">
+                                                                                                            <span class="cpu1">Service4</span>
+                                                                                                            <span class="cpu2">OFF</span>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+
+                                                                                            </div>
+
+                                                                                        </div>
+
+                                                                                        <div class="search-box">
+                                                                                            <div class="row">
+                                                                                                <div class="col-lg-1"></div>
+                                                                                                <div class="col-lg-5">
+                                                                                                    <div class="input-group">
+                                                                                                        <!--                                                                                                        <span class="input-group-btn">
+                                                                                                                                                                                                        <button class="btn btn-default" type="button">Add</button>
+                                                                                                                                                                                                        <button class="btn btn-default" type="button">Remove</button>
+                                                                                                                                                                                                        </span>-->
+                                                                                                        <!--                                                                                                        <input type="text" class="form-control" placeholder="Search for...">-->
+                                                                                                    </div><!-- /input-group -->
+                                                                                                </div><!-- /.col-lg-6 -->
+
+                                                                                            </div><!-- /.row -->
+                                                                                        </div>
+                                                                                        <div class="table-ser">
+                                                                                            <table class="table">
+                                                                                                <thead>
+                                                                                                    <tr>
+                                                                                                        <th>Service name</th>
+                                                                                                        <th>Host</th>
+                                                                                                        <th>Port</th>
+                                                                                                        <th>Status</th>
+                                                                                                        <th>Cách khắc phục</th>
+                                                                                                    </tr>
+                                                                                                </thead>
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td class="font1">Service 1</td>
+                                                                                                        <td class="font1">xxx</td>
+                                                                                                        <td class="font1">8080</td>
+                                                                                                        <td><div class="trangthai1"><p>ON</p></div></td>
+                                                                                                        <td class="font1">Mua cái mới</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td class="font1">Service 2</td>
+                                                                                                        <td class="font1">yyy</td>
+                                                                                                        <td class="font1">8080</td>
+                                                                                                        <td><div class="trangthai2"><p>OFF</p></div></td>
+                                                                                                        <td class="font1">Mua cái mới</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td class="font1">Service 3</td>
+                                                                                                        <td class="font1">zzz</td>
+                                                                                                        <td class="font1">8080</td>
+                                                                                                        <td><div class="trangthai2"><p>OFF</p></div></td>
+                                                                                                        <td class="font1">Mua cái mới</td>
+                                                                                                    </tr>
+
+                                                                                                </tbody>
+                                                                                            </table>                                               </table>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <h3></h3>
+                                                                    </div>
+                                                                </div>
+                                                                <script>
+// Get the modal
+                                                                    var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+                                                                    var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+                                                                    var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+                                                                    btn.onclick = function () {
+                                                                        modal.style.display = "block";
+                                                                    }
+
+// When the user clicks on <span> (x), close the modal
+                                                                    span.onclick = function () {
+                                                                        modal.style.display = "none";
+                                                                    }
+
+// When the user clicks anywhere outside of the modal, close it
+                                                                    window.onclick = function (event) {
+                                                                        if (event.target == modal) {
+                                                                            modal.style.display = "none";
+                                                                        }
+                                                                    }
+                                                                </script>
+
+                                                            </div>
+
+                                                        </td>
+
+                                                    </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </body>
+</html>

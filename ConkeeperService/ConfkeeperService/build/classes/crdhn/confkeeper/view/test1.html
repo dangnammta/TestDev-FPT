@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="/moment.js" type="text/javascript"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="/jquery.js" type="text/javascript"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="/bootstrap.js" type="text/javascript"></script>
+        <script src="/gonrin.datetimepicker.js" type="text/javascript"></script><!--
+        <a href="glyphicons-halflings-regular.eot"></a>
+        css
+         Optional theme 
+                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        -->        <link href="/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet"> 
+        <link href="/gonrin.datetimepicker.css" rel="stylesheet" type="text/css"/>
+
+
+        <link href="/style.css" rel="stylesheet" type="text/css"/>
+
+
+        <script type="text/javascript">
+            $(function () {
+                $('#datetime').datetimepicker({
+                    textFormat: 'DD-MM-YYYY',
+                    extraFormats: ['DDMMYYYY']
+                });
+                $('#datetime').on('change.gonrin', function (e) {
+//            console.log(e.date);
+                })
+            });
+        </script>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetime1').datetimepicker({
+                    textFormat: 'DD-MM-YYYY',
+                    extraFormats: ['DDMMYYYY']
+                });
+                $('#datetime1').on('change.gonrin', function (e) {
+//            console.log(e.date);
+                })
+            });
+        </script>
+      
+
+
+        <script language="javascript">
+            function load_ajax() {
+                var name = $("#nhap").val();
+                var date = $("#datetime").val();
+                var date1 = $("#datetime1").val();
+                //var ketqua;
+                $.ajax({
+                    url: "/conf/conf2",
+                    type: "post",
+                    dataType: "json",
+                    data: {
+                        name: name,
+                        date: date,
+                        date1: date1,
+                  
+                    },
+                    success: function (data) {
+//                        alert(data);
+                        document.getElementById("test").innerHTML = data.ketqua;
+//                        $("#").val(data.ketqua);
+                    }
+                });
+            }
+        </script>
+
+    </head>
+    <body>
+        <div id="result">
+            load
+        </div>
+
+        <p>tu ngay</p>
+        <input type='text' id='datetime' value='22012016'/>
+        <p>den ngay</p>
+        <input type='text' id='datetime1' value='22012016'/>
+        <input type="text" name="nhap" id="nhap" value="">
+        <input type="button" name="clickme" id="clickme" onclick="load_ajax()" value="Click"/>
+        
+        <p id="test">xxxxx</p>
+        
+    </body>
+</html>

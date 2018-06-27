@@ -1,0 +1,129 @@
+Lexer tokenized input:
+======================
+[T:print 1][NL:
+][Go:GO][C:--comment1][NL:
+][Go:GO][WS: ][C:--comment2][NL:
+][Go:GO][WS: ][T:1][C:--comment3][NL:
+][Setvar::setvar][WS: ][T:a][WS: ][T:--][NL:
+][Setvar::setvar][WS: ][T:b][WS: ][T:c--notcomment][NL:
+][Setvar::setvar][WS: ][T:d][WS: ][T:e][WS: ][T:--comment][NL:
+][Setvar::setvar][WS: ][T:f][WS: ][T:/*notcomment*/][NL:
+][Setvar::setvar][WS: ][T:g][WS: ][T:h--notcomment][WS: ][T:--comment][NL:
+][Setvar::setvar][WS: ][T:j][WS: ][T:k--notcomment--notcomment][NL:
+][Setvar::setvar][WS: ][T:a--][WS: ][T:b--][NL:
+][Include::r][WS: ][T:input-2.txt][WS: ][T:--comment][NL:
+][C:-- next line will error in parser][NL:
+][Include::r][WS: ][T:--comment.txt][NL:
+][OnError::on error][WS: ][T:exit][C:--comment][NL:
+][OnError::on error][WS: ][T:exit][WS: ][C:--comment][NL:
+][Eof:]
+Tokens:
+=======
+[Token Text at TS-pass-command-and-comment.txt(1:1 [0] - 1:8 [7]): 'print 1']
+[Token NewLine at TS-pass-command-and-comment.txt(1:8 [7] - 2:1 [8]): '\n']
+[Token Go at TS-pass-command-and-comment.txt(2:1 [8] - 2:3 [10]): 'GO']
+[Token Comment at TS-pass-command-and-comment.txt(2:3 [10] - 2:13 [20]): '--comment1']
+[Token NewLine at TS-pass-command-and-comment.txt(2:13 [20] - 3:1 [21]): '\n']
+[Token Go at TS-pass-command-and-comment.txt(3:1 [21] - 3:3 [23]): 'GO']
+[Token Whitespace at TS-pass-command-and-comment.txt(3:3 [23] - 3:4 [24]): ' ']
+[Token Comment at TS-pass-command-and-comment.txt(3:4 [24] - 3:14 [34]): '--comment2']
+[Token NewLine at TS-pass-command-and-comment.txt(3:14 [34] - 4:1 [35]): '\n']
+[Token Go at TS-pass-command-and-comment.txt(4:1 [35] - 4:3 [37]): 'GO']
+[Token Whitespace at TS-pass-command-and-comment.txt(4:3 [37] - 4:4 [38]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(4:4 [38] - 4:5 [39]): '1']
+[Token Comment at TS-pass-command-and-comment.txt(4:5 [39] - 4:15 [49]): '--comment3']
+[Token NewLine at TS-pass-command-and-comment.txt(4:15 [49] - 5:1 [50]): '\n']
+[Token Setvar at TS-pass-command-and-comment.txt(5:1 [50] - 5:8 [57]): ':setvar']
+[Token Whitespace at TS-pass-command-and-comment.txt(5:8 [57] - 5:9 [58]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(5:9 [58] - 5:10 [59]): 'a']
+[Token Whitespace at TS-pass-command-and-comment.txt(5:10 [59] - 5:11 [60]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(5:11 [60] - 5:13 [62]): '--']
+[Token NewLine at TS-pass-command-and-comment.txt(5:13 [62] - 6:1 [63]): '\n']
+[Token Setvar at TS-pass-command-and-comment.txt(6:1 [63] - 6:8 [70]): ':setvar']
+[Token Whitespace at TS-pass-command-and-comment.txt(6:8 [70] - 6:9 [71]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(6:9 [71] - 6:10 [72]): 'b']
+[Token Whitespace at TS-pass-command-and-comment.txt(6:10 [72] - 6:11 [73]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(6:11 [73] - 6:24 [86]): 'c--notcomment']
+[Token NewLine at TS-pass-command-and-comment.txt(6:24 [86] - 7:1 [87]): '\n']
+[Token Setvar at TS-pass-command-and-comment.txt(7:1 [87] - 7:8 [94]): ':setvar']
+[Token Whitespace at TS-pass-command-and-comment.txt(7:8 [94] - 7:9 [95]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(7:9 [95] - 7:10 [96]): 'd']
+[Token Whitespace at TS-pass-command-and-comment.txt(7:10 [96] - 7:11 [97]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(7:11 [97] - 7:12 [98]): 'e']
+[Token Whitespace at TS-pass-command-and-comment.txt(7:12 [98] - 7:13 [99]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(7:13 [99] - 7:22 [108]): '--comment']
+[Token NewLine at TS-pass-command-and-comment.txt(7:22 [108] - 8:1 [109]): '\n']
+[Token Setvar at TS-pass-command-and-comment.txt(8:1 [109] - 8:8 [116]): ':setvar']
+[Token Whitespace at TS-pass-command-and-comment.txt(8:8 [116] - 8:9 [117]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(8:9 [117] - 8:10 [118]): 'f']
+[Token Whitespace at TS-pass-command-and-comment.txt(8:10 [118] - 8:11 [119]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(8:11 [119] - 8:25 [133]): '/*notcomment*/']
+[Token NewLine at TS-pass-command-and-comment.txt(8:25 [133] - 9:1 [134]): '\n']
+[Token Setvar at TS-pass-command-and-comment.txt(9:1 [134] - 9:8 [141]): ':setvar']
+[Token Whitespace at TS-pass-command-and-comment.txt(9:8 [141] - 9:9 [142]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(9:9 [142] - 9:10 [143]): 'g']
+[Token Whitespace at TS-pass-command-and-comment.txt(9:10 [143] - 9:11 [144]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(9:11 [144] - 9:24 [157]): 'h--notcomment']
+[Token Whitespace at TS-pass-command-and-comment.txt(9:24 [157] - 9:25 [158]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(9:25 [158] - 9:34 [167]): '--comment']
+[Token NewLine at TS-pass-command-and-comment.txt(9:34 [167] - 10:1 [168]): '\n']
+[Token Setvar at TS-pass-command-and-comment.txt(10:1 [168] - 10:8 [175]): ':setvar']
+[Token Whitespace at TS-pass-command-and-comment.txt(10:8 [175] - 10:9 [176]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(10:9 [176] - 10:10 [177]): 'j']
+[Token Whitespace at TS-pass-command-and-comment.txt(10:10 [177] - 10:11 [178]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(10:11 [178] - 10:36 [203]): 'k--notcomment--notcomment']
+[Token NewLine at TS-pass-command-and-comment.txt(10:36 [203] - 11:1 [204]): '\n']
+[Token Setvar at TS-pass-command-and-comment.txt(11:1 [204] - 11:8 [211]): ':setvar']
+[Token Whitespace at TS-pass-command-and-comment.txt(11:8 [211] - 11:9 [212]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(11:9 [212] - 11:12 [215]): 'a--']
+[Token Whitespace at TS-pass-command-and-comment.txt(11:12 [215] - 11:13 [216]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(11:13 [216] - 11:16 [219]): 'b--']
+[Token NewLine at TS-pass-command-and-comment.txt(11:16 [219] - 12:1 [220]): '\n']
+[Token Include at TS-pass-command-and-comment.txt(12:1 [220] - 12:3 [222]): ':r']
+[Token Whitespace at TS-pass-command-and-comment.txt(12:3 [222] - 12:4 [223]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(12:4 [223] - 12:15 [234]): 'input-2.txt']
+[Token Whitespace at TS-pass-command-and-comment.txt(12:15 [234] - 12:16 [235]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(12:16 [235] - 12:25 [244]): '--comment']
+[Token NewLine at TS-pass-command-and-comment.txt(12:25 [244] - 13:1 [245]): '\n']
+[Token Comment at TS-pass-command-and-comment.txt(13:1 [245] - 13:34 [278]): '-- next line will error in parser']
+[Token NewLine at TS-pass-command-and-comment.txt(13:34 [278] - 14:1 [279]): '\n']
+[Token Include at TS-pass-command-and-comment.txt(14:1 [279] - 14:3 [281]): ':r']
+[Token Whitespace at TS-pass-command-and-comment.txt(14:3 [281] - 14:4 [282]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(14:4 [282] - 14:17 [295]): '--comment.txt']
+[Token NewLine at TS-pass-command-and-comment.txt(14:17 [295] - 15:1 [296]): '\n']
+[Token OnError at TS-pass-command-and-comment.txt(15:1 [296] - 15:10 [305]): ':on error']
+[Token Whitespace at TS-pass-command-and-comment.txt(15:10 [305] - 15:11 [306]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(15:11 [306] - 15:15 [310]): 'exit']
+[Token Comment at TS-pass-command-and-comment.txt(15:15 [310] - 15:24 [319]): '--comment']
+[Token NewLine at TS-pass-command-and-comment.txt(15:24 [319] - 16:1 [320]): '\n']
+[Token OnError at TS-pass-command-and-comment.txt(16:1 [320] - 16:10 [329]): ':on error']
+[Token Whitespace at TS-pass-command-and-comment.txt(16:10 [329] - 16:11 [330]): ' ']
+[Token Text at TS-pass-command-and-comment.txt(16:11 [330] - 16:15 [334]): 'exit']
+[Token Whitespace at TS-pass-command-and-comment.txt(16:15 [334] - 16:16 [335]): ' ']
+[Token Comment at TS-pass-command-and-comment.txt(16:16 [335] - 16:25 [344]): '--comment']
+[Token NewLine at TS-pass-command-and-comment.txt(16:25 [344] - 17:1 [345]): '\n']
+[Token Eof at TS-pass-command-and-comment.txt(17:1 [345] - 17:1 [345]): '']
+
+*** Execute batch (1)
+Batch text:
+print 1
+
+
+*** Execute batch (1)
+Batch text:
+
+
+*** Execute batch (1)
+Batch text:
+
+
+Setting variable a to []
+Setting variable b to [c--notcomment]
+Setting variable d to [e]
+Setting variable f to [/*notcomment*/]
+Setting variable g to [h--notcomment]
+Setting variable j to [k--notcomment--notcomment]
+Setting variable a-- to [b--]
+*** PARSER: Include file "input-2.txt"
+
+[PARSER ERROR: code TokenExpected at 14:4 [282] - 14:17 [295] in TS-pass-command-and-comment.txt, token text: --comment.txt, message: Incorrect syntax was encountered while parsing '--comment.txt'.]

@@ -1,0 +1,109 @@
+
+-------
+17/35/2017 10:35:04
+-------
+
+Error executing 'CREATE PROCEDURE `p2` (in txt varchar(100))
+LANGUAGE SQL
+DETERMINISTIC
+SQL SECURITY DEFINER
+COMMENT 'A procedure'
+BEGIN
+    SELECT concat('Hello World: ', txt);
+END ' (line 10): Incorrect syntax near '`'.
+Error executing 'call p2("test") ' (line 14): Incorrect syntax near 'test'.
+Error executing 'call p("this will work too") ' (line 15): Incorrect syntax near 'this will work too'.
+
+-------
+17/49/2017 10:49:45
+-------
+
+
+-------
+17/52/2017 10:52:49
+-------
+
+Error executing 'BACKUP DATABASE TestImporter TO DISK='C:\Backups\Pubs.bak'
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+WITH DESCRIPTION = 'Log backup for TestImporter'
+' (line 4): The statement BACKUP LOG is not allowed while the recovery model is SIMPLE. Use BACKUP DATABASE or change the recovery model using ALTER DATABASE.
+
+-------
+17/53/2017 10:53:54
+-------
+
+Error executing 'BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+WITH DESCRIPTION = 'Log backup for TestImporter'
+GO
+' (line 4): Incorrect syntax near 'GO'.
+
+-------
+17/54/2017 10:54:06
+-------
+
+Error executing 'BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+WITH DESCRIPTION = 'Log backup for TestImporter'
+' (line 3): The statement BACKUP LOG is not allowed while the recovery model is SIMPLE. Use BACKUP DATABASE or change the recovery model using ALTER DATABASE.
+
+-------
+17/54/2017 10:54:31
+-------
+
+Error executing 'BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+' (line 2): The statement BACKUP LOG is not allowed while the recovery model is SIMPLE. Use BACKUP DATABASE or change the recovery model using ALTER DATABASE.
+
+-------
+17/59/2017 10:59:59
+-------
+
+
+-------
+17/00/2017 11:00:40
+-------
+
+Error executing 'BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+ALTER DATABASE TestImporter SET RECOVERY FULL
+' (line 3): BACKUP LOG cannot be performed because there is no current database backup.
+
+-------
+17/01/2017 11:01:12
+-------
+
+
+-------
+17/10/2017 11:10:12
+-------
+
+Error executing 'BACKUP DATABASE TestImporter TO DISK='C:\Backups\Pubs.bak'
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+ALTER DATABASE TestImporter SET RECOVERY FULL
+C:\>xcopy \\crd-hn\Backups\Pubs.back /tmp/backup
+' (line 6): Incorrect syntax near '\'.
+
+-------
+17/10/2017 11:10:29
+-------
+
+Error executing 'BACKUP DATABASE TestImporter TO DISK='C:\Backups\Pubs.bak'
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+ALTER DATABASE TestImporter SET RECOVERY FULL
+C:\>xcopy \\crd-hn\Backups\Pubs.back \tmp\backup
+' (line 6): Incorrect syntax near '\'.
+
+-------
+17/22/2017 11:22:56
+-------
+
+Error executing 'BACKUP DATABASE TestImporter TO DISK='C:\Backups\Pubs.bak'
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+ALTER DATABASE TestImporter SET RECOVERY FULL
+C:\>xcopy \\10.86.222.24\Backups\Pubs.back \tmp\backup
+' (line 6): Incorrect syntax near '\'.

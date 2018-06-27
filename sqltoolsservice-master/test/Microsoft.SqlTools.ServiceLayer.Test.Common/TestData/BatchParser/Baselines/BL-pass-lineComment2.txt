@@ -1,0 +1,16 @@
+Lexer tokenized input:
+======================
+[C:--][NL:
+][C:--][Eof:]
+Tokens:
+=======
+[Token Comment at TS-pass-lineComment2.txt(1:1 [0] - 1:3 [2]): '--']
+[Token NewLine at TS-pass-lineComment2.txt(1:3 [2] - 2:1 [3]): '\n']
+[Token Comment at TS-pass-lineComment2.txt(2:1 [3] - 2:3 [5]): '--']
+[Token Eof at TS-pass-lineComment2.txt(2:3 [5] - 2:3 [5]): '']
+
+*** Execute batch (1)
+Batch text:
+--
+--
+

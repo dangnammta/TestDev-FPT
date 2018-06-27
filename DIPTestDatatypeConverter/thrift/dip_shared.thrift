@@ -1,0 +1,1 @@
+../../thrift_shared/dip_shared.thrift

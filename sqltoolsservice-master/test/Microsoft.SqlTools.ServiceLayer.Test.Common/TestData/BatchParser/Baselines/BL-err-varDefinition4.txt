@@ -1,0 +1,16 @@
+Lexer tokenized input:
+======================
+[Setvar::setvar][NL:
+][C:-- no variable defined][NL:
+][Eof:]
+Tokens:
+=======
+[Token Setvar at TS-err-varDefinition4.txt(1:1 [0] - 1:8 [7]): ':setvar']
+[Token NewLine at TS-err-varDefinition4.txt(1:8 [7] - 2:1 [8]): '\n']
+[Token Comment at TS-err-varDefinition4.txt(2:1 [8] - 2:23 [30]): '-- no variable defined']
+[Token NewLine at TS-err-varDefinition4.txt(2:23 [30] - 3:1 [31]): '\n']
+[Token Eof at TS-err-varDefinition4.txt(3:1 [31] - 3:1 [31]): '']
+
+[PARSER ERROR: code TokenExpected at 1:8 [7] - 2:1 [8] in TS-err-varDefinition4.txt, token text: 
+, message: Incorrect syntax was encountered while parsing '
+'.]

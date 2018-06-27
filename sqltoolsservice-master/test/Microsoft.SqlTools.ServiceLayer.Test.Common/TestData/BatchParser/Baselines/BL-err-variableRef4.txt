@@ -1,0 +1,9 @@
+Lexer tokenized input:
+======================
+[T:Unterminated variable reference (at EOF): $(var][Eof:]
+Tokens:
+=======
+[Token Text at TS-err-variableRef4.txt(1:1 [0] - 1:48 [47]): 'Unterminated variable reference (at EOF): $(var']
+[Token Eof at TS-err-variableRef4.txt(1:48 [47] - 1:48 [47]): '']
+
+[PARSER ERROR: code InvalidVariableName at 1:43 [42] - 1:48 [47] in TS-err-variableRef4.txt, token text: $(var, message: Incorrect syntax was encountered while parsing '$(var'.]

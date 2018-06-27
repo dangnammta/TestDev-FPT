@@ -1,0 +1,8 @@
+Lexer tokenized input:
+======================
+
+Tokens:
+=======
+[ERROR: code CommentNotTerminated at 1:1 [0] - 1:32 [31] in TS-err-blockComment.txt, message: Missing end comment mark '*/'.]
+
+[PARSER ERROR: code CommentNotTerminated at 1:1 [0] - 1:32 [31] in TS-err-blockComment.txt, token text: /* unterminated block comment *, message: Missing end comment mark '*/'.]

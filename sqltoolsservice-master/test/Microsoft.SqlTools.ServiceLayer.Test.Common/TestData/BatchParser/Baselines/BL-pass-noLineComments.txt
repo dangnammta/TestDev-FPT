@@ -1,0 +1,23 @@
+Lexer tokenized input:
+======================
+[C:/* 
+-- not a line comment
+*/][NL:
+][T:- - not a comment][NL:
+][Eof:]
+Tokens:
+=======
+[Token Comment at TS-pass-noLineComments.txt(1:1 [0] - 3:3 [28]): '/* \n-- not a line comment\n*/']
+[Token NewLine at TS-pass-noLineComments.txt(3:3 [28] - 4:1 [29]): '\n']
+[Token Text at TS-pass-noLineComments.txt(4:1 [29] - 4:18 [46]): '- - not a comment']
+[Token NewLine at TS-pass-noLineComments.txt(4:18 [46] - 5:1 [47]): '\n']
+[Token Eof at TS-pass-noLineComments.txt(5:1 [47] - 5:1 [47]): '']
+
+*** Execute batch (1)
+Batch text:
+/* 
+-- not a line comment
+*/
+- - not a comment
+
+

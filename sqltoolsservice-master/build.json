@@ -1,0 +1,24 @@
+{
+  "UseSystemDotNetPath": "true",
+  "DotNetFolder": ".dotnet",
+  "DotNetInstallScriptURL": "https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0-preview2/scripts/obtain",
+  "DotNetChannel": "preview",
+  "DotNetVersion": "1.0.0-preview2-003121",
+  "BuildToolsFolder": ".tools",
+  "ArtifactsFolder": "artifacts",
+  "PackageName": "Microsoft.SqlTools.ServiceLayer",
+  "TestProjects": {
+    "Microsoft.SqlTools.ServiceLayer.UnitTests": [
+      "netcoreapp2.0"
+   ]
+  },
+  "Frameworks": [  
+    "netcoreapp2.0"
+  ],
+  "MainProjects": [     
+    "Microsoft.SqlTools.ServiceLayer",
+    "Microsoft.SqlTools.Credentials",
+    "Microsoft.SqlTools.Serialization",
+    "Microsoft.SqlTools.ResourceProvider"
+  ]
+}

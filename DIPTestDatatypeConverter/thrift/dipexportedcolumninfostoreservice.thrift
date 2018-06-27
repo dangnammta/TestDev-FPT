@@ -1,0 +1,1 @@
+../../DIPExportedColumnInfoStoreService/thrift/dipexportedcolumninfostoreservice.thrift

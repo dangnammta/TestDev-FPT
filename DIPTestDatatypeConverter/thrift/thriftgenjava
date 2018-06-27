@@ -1,0 +1,13 @@
+rm -r -f gen-java/*
+
+../../thrift/thrift9/thrift -r --gen java:pure_enums dipexportrequestqueueservice.thrift
+../../thrift/thrift9/thrift -r --gen java:pure_enums dipexportrequeststoreservice.thrift
+../../thrift/thrift9/thrift -r --gen java:pure_enums i32toi64setservice.thrift
+../../thrift/thrift9/thrift -r --gen java:pure_enums dipexporteddbinfostoreservice.thrift
+../../thrift/thrift9/thrift -r --gen java:pure_enums dipexportedtableinfostoreservice.thrift
+../../thrift/thrift9/thrift -r --gen java:pure_enums dipexportedcolumninfostoreservice.thrift
+../../thrift/thrift9/thrift -r --gen java:pure_enums dipdbconnectorservice.thrift
+../../thrift/thrift9/thrift -r --gen java:pure_enums dipdataintegrationcenterservice.thrift
+../../thrift/thrift9/thrift -r --gen java:pure_enums diptablechangelogstoreservice.thrift
+../../thrift/thrift9/thrift -r --gen java:pure_enums dipimportedtableinfostoreservice.thrift
+../../thrift/thrift9/thrift -r --gen java:pure_enums flogservice.thrift

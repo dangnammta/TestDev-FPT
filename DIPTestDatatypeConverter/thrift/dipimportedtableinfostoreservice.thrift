@@ -1,0 +1,1 @@
+../../DIPImportedTableInfoStoreService/thrift/dipimportedtableinfostoreservice.thrift

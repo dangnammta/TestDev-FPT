@@ -1,0 +1,35 @@
+Lexer tokenized input:
+======================
+[C:/**/][C:/***/][C:/* */][C:/** */][T: */][NL:
+][T:one comment:   ][C:/*/*/ */*/][NL:
+][T:not a comment: / */][NL:
+][C:/* block comment */][NL:
+][C:/* block 
+comment */][Eof:]
+Tokens:
+=======
+[Token Comment at TS-pass-blockComment.txt(1:1 [0] - 1:5 [4]): '/**/']
+[Token Comment at TS-pass-blockComment.txt(1:5 [4] - 1:10 [9]): '/***/']
+[Token Comment at TS-pass-blockComment.txt(1:10 [9] - 1:15 [14]): '/* */']
+[Token Comment at TS-pass-blockComment.txt(1:15 [14] - 1:21 [20]): '/** */']
+[Token Text at TS-pass-blockComment.txt(1:21 [20] - 1:24 [23]): ' */']
+[Token NewLine at TS-pass-blockComment.txt(1:24 [23] - 2:1 [24]): '\n']
+[Token Text at TS-pass-blockComment.txt(2:1 [24] - 2:16 [39]): 'one comment:   ']
+[Token Comment at TS-pass-blockComment.txt(2:16 [39] - 2:26 [49]): '/*/*/ */*/']
+[Token NewLine at TS-pass-blockComment.txt(2:26 [49] - 3:1 [50]): '\n']
+[Token Text at TS-pass-blockComment.txt(3:1 [50] - 3:20 [69]): 'not a comment: / */']
+[Token NewLine at TS-pass-blockComment.txt(3:20 [69] - 4:1 [70]): '\n']
+[Token Comment at TS-pass-blockComment.txt(4:1 [70] - 4:20 [89]): '/* block comment */']
+[Token NewLine at TS-pass-blockComment.txt(4:20 [89] - 5:1 [90]): '\n']
+[Token Comment at TS-pass-blockComment.txt(5:1 [90] - 6:11 [110]): '/* block \ncomment */']
+[Token Eof at TS-pass-blockComment.txt(6:11 [110] - 6:11 [110]): '']
+
+*** Execute batch (1)
+Batch text:
+/**//***//* *//** */ */
+one comment:   /*/*/ */*/
+not a comment: / */
+/* block comment */
+/* block 
+comment */
+

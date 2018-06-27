@@ -1,0 +1,1 @@
+../../DIPDataIntegrationCenterService/thrift/dipdataintegrationcenterservice.thrift

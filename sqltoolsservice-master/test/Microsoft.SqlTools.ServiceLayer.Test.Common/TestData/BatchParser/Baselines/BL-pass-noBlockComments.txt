@@ -1,0 +1,23 @@
+Lexer tokenized input:
+======================
+[T:/ * */][NL:
+][C:-- /*][NL:
+][C:-- */][NL:
+][Eof:]
+Tokens:
+=======
+[Token Text at TS-pass-noBlockComments.txt(1:1 [0] - 1:7 [6]): '/ * */']
+[Token NewLine at TS-pass-noBlockComments.txt(1:7 [6] - 2:1 [7]): '\n']
+[Token Comment at TS-pass-noBlockComments.txt(2:1 [7] - 2:6 [12]): '-- /*']
+[Token NewLine at TS-pass-noBlockComments.txt(2:6 [12] - 3:1 [13]): '\n']
+[Token Comment at TS-pass-noBlockComments.txt(3:1 [13] - 3:6 [18]): '-- */']
+[Token NewLine at TS-pass-noBlockComments.txt(3:6 [18] - 4:1 [19]): '\n']
+[Token Eof at TS-pass-noBlockComments.txt(4:1 [19] - 4:1 [19]): '']
+
+*** Execute batch (1)
+Batch text:
+/ * */
+-- /*
+-- */
+
+

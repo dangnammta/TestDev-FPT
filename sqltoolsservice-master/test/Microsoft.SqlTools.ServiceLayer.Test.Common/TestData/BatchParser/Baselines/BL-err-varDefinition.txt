@@ -1,0 +1,10 @@
+Lexer tokenized input:
+======================
+[Setvar::setvar][WS: ]
+Tokens:
+=======
+[Token Setvar at TS-err-varDefinition.txt(1:1 [0] - 1:8 [7]): ':setvar']
+[Token Whitespace at TS-err-varDefinition.txt(1:8 [7] - 1:9 [8]): ' ']
+[ERROR: code UnrecognizedToken at 1:9 [8] - 1:13 [12] in TS-err-varDefinition.txt, message: Incorrect syntax was encountered while parsing '0var'.]
+
+[PARSER ERROR: code UnrecognizedToken at 1:9 [8] - 1:13 [12] in TS-err-varDefinition.txt, token text: 0var, message: Incorrect syntax was encountered while parsing '0var'.]

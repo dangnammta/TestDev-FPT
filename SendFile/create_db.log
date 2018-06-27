@@ -1,0 +1,120 @@
+
+-------
+17/35/2017 10:35:04
+-------
+
+CREATE PROCEDURE `p2` (in txt varchar(100))
+LANGUAGE SQL
+DETERMINISTIC
+SQL SECURITY DEFINER
+COMMENT 'A procedure'
+BEGIN
+    SELECT concat('Hello World: ', txt);
+END 
+call p2("test") 
+call p("this will work too") 
+
+-------
+17/49/2017 10:49:45
+-------
+
+BACKUP DATABASE TestImporter TO DISK='C:\Backups\Pubs.bak'
+
+
+-------
+17/52/2017 10:52:49
+-------
+
+BACKUP DATABASE TestImporter TO DISK='C:\Backups\Pubs.bak'
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+WITH DESCRIPTION = 'Log backup for TestImporter'
+
+
+-------
+17/53/2017 10:53:54
+-------
+
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+WITH DESCRIPTION = 'Log backup for TestImporter'
+GO
+
+
+-------
+17/54/2017 10:54:06
+-------
+
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+WITH DESCRIPTION = 'Log backup for TestImporter'
+
+
+-------
+17/54/2017 10:54:31
+-------
+
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+
+
+-------
+17/59/2017 10:59:59
+-------
+
+ALTER DATABASE TestImporter SET RECOVERY FULL
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+
+
+-------
+17/00/2017 11:00:40
+-------
+
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+ALTER DATABASE TestImporter SET RECOVERY FULL
+
+
+-------
+17/01/2017 11:01:12
+-------
+
+BACKUP DATABASE TestImporter TO DISK='C:\Backups\Pubs.bak'
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+ALTER DATABASE TestImporter SET RECOVERY FULL
+
+
+-------
+17/10/2017 11:10:12
+-------
+
+BACKUP DATABASE TestImporter TO DISK='C:\Backups\Pubs.bak'
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+ALTER DATABASE TestImporter SET RECOVERY FULL
+C:\>xcopy \\crd-hn\Backups\Pubs.back /tmp/backup
+
+
+-------
+17/10/2017 11:10:29
+-------
+
+BACKUP DATABASE TestImporter TO DISK='C:\Backups\Pubs.bak'
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+ALTER DATABASE TestImporter SET RECOVERY FULL
+C:\>xcopy \\crd-hn\Backups\Pubs.back \tmp\backup
+
+
+-------
+17/22/2017 11:22:56
+-------
+
+BACKUP DATABASE TestImporter TO DISK='C:\Backups\Pubs.bak'
+BACKUP LOG TestImporter 
+TO DISK = 'C:\Backups\TestImporter.TRN'
+ALTER DATABASE TestImporter SET RECOVERY FULL
+C:\>xcopy \\10.86.222.24\Backups\Pubs.back \tmp\backup
+

@@ -1,0 +1,45 @@
+Lexer tokenized input:
+======================
+[Setvar::setvar][WS: ][T:a][WS: ][T:""][NL:
+][Setvar::setvar][WS: ][T:a][NL:
+][Setvar::setvar][WS: ][T:a][WS: ][T:""""][NL:
+][C:/* double-quote followed by new line: */][NL:
+][Setvar::setvar][WS: ][T:a][WS: ][T:"""
+"][Eof:]
+Tokens:
+=======
+[Token Setvar at TS-pass-varDefinition4.txt(1:1 [0] - 1:8 [7]): ':setvar']
+[Token Whitespace at TS-pass-varDefinition4.txt(1:8 [7] - 1:9 [8]): ' ']
+[Token Text at TS-pass-varDefinition4.txt(1:9 [8] - 1:10 [9]): 'a']
+[Token Whitespace at TS-pass-varDefinition4.txt(1:10 [9] - 1:11 [10]): ' ']
+[Token Text at TS-pass-varDefinition4.txt(1:11 [10] - 1:13 [12]): '""']
+[Token NewLine at TS-pass-varDefinition4.txt(1:13 [12] - 2:1 [13]): '\n']
+[Token Setvar at TS-pass-varDefinition4.txt(2:1 [13] - 2:8 [20]): ':setvar']
+[Token Whitespace at TS-pass-varDefinition4.txt(2:8 [20] - 2:9 [21]): ' ']
+[Token Text at TS-pass-varDefinition4.txt(2:9 [21] - 2:10 [22]): 'a']
+[Token NewLine at TS-pass-varDefinition4.txt(2:10 [22] - 3:1 [23]): '\n']
+[Token Setvar at TS-pass-varDefinition4.txt(3:1 [23] - 3:8 [30]): ':setvar']
+[Token Whitespace at TS-pass-varDefinition4.txt(3:8 [30] - 3:9 [31]): ' ']
+[Token Text at TS-pass-varDefinition4.txt(3:9 [31] - 3:10 [32]): 'a']
+[Token Whitespace at TS-pass-varDefinition4.txt(3:10 [32] - 3:11 [33]): ' ']
+[Token Text at TS-pass-varDefinition4.txt(3:11 [33] - 3:15 [37]): '""""']
+[Token NewLine at TS-pass-varDefinition4.txt(3:15 [37] - 4:1 [38]): '\n']
+[Token Comment at TS-pass-varDefinition4.txt(4:1 [38] - 4:41 [78]): '/* double-quote followed by new line: */']
+[Token NewLine at TS-pass-varDefinition4.txt(4:41 [78] - 5:1 [79]): '\n']
+[Token Setvar at TS-pass-varDefinition4.txt(5:1 [79] - 5:8 [86]): ':setvar']
+[Token Whitespace at TS-pass-varDefinition4.txt(5:8 [86] - 5:9 [87]): ' ']
+[Token Text at TS-pass-varDefinition4.txt(5:9 [87] - 5:10 [88]): 'a']
+[Token Whitespace at TS-pass-varDefinition4.txt(5:10 [88] - 5:11 [89]): ' ']
+[Token Text at TS-pass-varDefinition4.txt(5:11 [89] - 6:2 [94]): '"""\n"']
+[Token Eof at TS-pass-varDefinition4.txt(6:2 [94] - 6:2 [94]): '']
+
+Setting variable a to []
+Setting variable a to []
+Setting variable a to ["]
+Setting variable a to ["
+]
+*** Execute batch (1)
+Batch text:
+/* double-quote followed by new line: */
+
+

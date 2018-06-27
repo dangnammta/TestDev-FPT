@@ -1,0 +1,1 @@
+../../DIPExportRequestQueueService/thrift/dipexportrequestqueueservice.thrift

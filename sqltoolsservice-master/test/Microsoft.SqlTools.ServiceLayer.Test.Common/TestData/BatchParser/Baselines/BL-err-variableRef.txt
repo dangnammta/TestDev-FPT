@@ -1,0 +1,11 @@
+Lexer tokenized input:
+======================
+[T:Variable reference with no name: $()][NL:
+][Eof:]
+Tokens:
+=======
+[Token Text at TS-err-variableRef.txt(1:1 [0] - 1:37 [36]): 'Variable reference with no name: $()']
+[Token NewLine at TS-err-variableRef.txt(1:37 [36] - 2:1 [37]): '\n']
+[Token Eof at TS-err-variableRef.txt(2:1 [37] - 2:1 [37]): '']
+
+[PARSER ERROR: code InvalidVariableName at 1:34 [33] - 1:37 [36] in TS-err-variableRef.txt, token text: $(), message: Incorrect syntax was encountered while parsing '$()'.]
